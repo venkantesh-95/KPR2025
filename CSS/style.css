@@ -1,0 +1,26 @@
+.header{
+    background-color: black;
+    color: blanchedalmond;
+}
+#one{
+    color: aquamarine;
+}
+#three{
+    color: blue;
+}
+.header:hover{
+    background-color: cadetblue;
+    color: blueviolet;
+}
+*{
+    color: green;
+}
+.link{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.link:hover{
+    color: coral;
+    background-color: darkred;
+}
