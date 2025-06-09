@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 15px;
+    }
+    ul {
+      margin-top: 20px;
+    }
+    .entry {
+      margin-bottom: 10px;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body style="background-image: url(./image.png);background-size: cover;">
+
+  <h2>Student Information Form</h2>
+
+  <form id="studentForm">
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Department:</label>
+    <input type="text" id="department" required>
+
+    <label>Roll No:</label>
+    <input type="text" id="rollNo" required>
+
+    <label>Year of Study:</label>
+    <input type="text" id="year" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Submitted Data:</h3>
+  <div id="dataList"></div>
+
+  <script>
+    const form = document.getElementById('studentForm');
+    const dataList = document.getElementById('dataList');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const department = document.getElementById('department').value;
+      const rollNo = document.getElementById('rollNo').value;
+      const year = document.getElementById('year').value;
+
+      const entry = document.createElement('div');
+      entry.className = 'entry';
+      entry.innerHTML = `
+        <strong>Name:</strong> ${name}<br>
+        <strong>Department:</strong> ${department}<br>
+        <strong>Roll No:</strong> ${rollNo}<br>
+        <strong>Year:</strong> ${year}
+      `;
+      dataList.appendChild(entry);
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

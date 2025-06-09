@@ -1,0 +1,10 @@
+a=10
+b=50
+c="string"
+d=True
+e=3.10
+print(a+b)
+print(type(a))
+print(type(c))
+print(type(d))
+print(type(e))

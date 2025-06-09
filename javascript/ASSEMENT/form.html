@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url(./image.png); background-size: cover;">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name"><br>
+        <label for="department">Department:</label>
+        <input type="text" placeholder="Enter your department" id="department"><br>
+        <label for="roll no">rollno:</label>
+        <input type="text" placeholder="Enter your roll no" id="rollno"><br>
+        <label for="year">Year</label>
+        <input type="text" placeholder="Enter year of studing" id="year"><br>
+        <button onclick="sub()">submit</button>
+        <ol id="display">
+        <li>
+        </li>
+    </ol>
+    <script>
+        function sub(){
+             const name=document.getElementById('name').value
+            const li=document.createElement('li')
+            li.textContent=name
+            document.getElementById('display').append(li)
+        }
+    </script>
+</body>
+</html>
